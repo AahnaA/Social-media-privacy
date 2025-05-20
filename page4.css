@@ -1,0 +1,259 @@
+/* Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(120deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+    font-size: 40px;
+    color: lightblue;
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Side-by-Side Layout */
+#tips-future-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+    padding: 40px;
+}
+
+.left-box, .right-box {
+    width: 48%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#privacy-insights {
+    text-align: left; /* Align text content to the left */
+    width: 80%; /* Adjust width to prevent it from stretching too much */
+    margin-left: 0; /* Push it to the left */
+    margin-right: auto; /* Prevent centering */
+}
+
+/* If you want images and grid items to also align left */
+.grid-container {
+    display: flex;
+    justify-content: flex-start; /* Align items towards the left */
+    gap: 20px;
+}
+
+.grid-item img {
+    display: block;
+    width: 100%;
+    margin-top: 30px; /* Moves the image lower */
+}
+.grid-item {
+    padding-top: 30px; /* Moves the entire item lower */
+}
+
+
+#tips-container {
+    text-align: right; /* Aligns content inside the section to the right */
+    width: 45%; /* Controls the section width */
+    float: right; /* Moves the entire section towards the right */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+/* Ensures responsiveness */
+@media screen and (max-width: 768px) {
+    #tips-container {
+        width: 100%;
+        float: none; /* Stacks on smaller screens */
+        text-align: center; /* Re-centers on mobile */
+    }
+}
+
+button {
+    background: lightblue;
+    color: black;
+    font-size: 18px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: lightblue;
+}
+#future-predictor {
+    position: absolute; /* Fixes the section in place */
+    top: 288%; /* Moves it towards the bottom */
+    left: 20px; /* Pushes it to the left */
+    width: 40%; /* Adjusts section width */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+/* Ensures responsiveness */
+@media screen and (max-width: 768px) {
+    #future-predictor {
+        position: static; /* Resets position for mobile */
+        width: 100%; /* Makes it full width */
+        text-align: center; /* Re-centers on smaller screens */
+        margin-top: 30px; /* Adds spacing */
+    }
+}
+.scroll-image {
+    position: absolute;
+    right: 10%; /* Positions the image to the right */
+    top: 50%; /* Centers it vertically */
+    transform: translateY(-50%);
+    width: 40%; /* Adjust size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.scroll-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Scroll-triggered fade-in effect */
+.scroll-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.bottom-button {
+    position: fixed; /* Stays at the bottom */
+    bottom: 20px;
+    left: 50%; /* Centers the button horizontally */
+    transform: translateX(-50%);
+    background: lightblue;
+    color: black;
+    font-size: 18px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.bottom-button:hover {
+    background: lightcyan;
+}
+
+p {
+    font-size: 25px; /* Increases text size */
+    font-family: 'Poppins', sans-serif; /* Makes it modern and readable */
+    line-height: 1.8; /* Improves spacing for readability */
+    color: #e0e0e0; /* Light text for contrast */
+    max-width: 750px; /* Prevents excessive stretching */
+    margin: 10px auto; /* Centers text within container */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15); /* Adds subtle contrast */
+    border-radius: 8px;
+}
+
+h2, h3 {
+    font-size: 32px; /* Enlarges the heading */
+    font-family: 'Poppins', sans-serif; /* Modern and easy to read */
+    font-weight: bold; /* Makes it stand out */
+    text-align: center; /* Centers the text */
+    color: lightblue; /* Custom color */
+    margin-bottom: 20px; /* Adds spacing below */
+    text-transform: uppercase; /* Makes text all caps */
+}
+.scroll-image-left {
+    position: absolute;
+    left: 0%; /* Moves image to the left */
+    top: 200%; /* Centers it vertically */
+    transform: translateY(-50%);
+    width: 40%; /* Adjust size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.scroll-image-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Scroll-triggered fade-in effect */
+.scroll-image-left.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.bottom-button {
+    margin-top: 30px; /* Moves the button lower */
+}
+
+.scroll-image {
+    margin-top: 400px; /* Moves the image lower */
+}

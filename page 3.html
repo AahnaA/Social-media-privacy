@@ -1,0 +1,137 @@
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on different screen sizes -->
+    <title>Social Media Algorithm Guide</title> <!-- Sets the page title displayed in the browser tab -->
+    <link rel="stylesheet" href="page3.css"> <!-- Links an external CSS file for styling -->
+</head>
+<body>
+
+    <div class="tab-container"> <!-- Wrapper for the tab buttons -->
+        <div class="tab-buttons"> <!-- Container for all tab buttons -->
+            <button class="tab-button active" data-tab="facebook">Facebook</button> <!-- Button for Facebook tab, set as active by default -->
+            <button class="tab-button" data-tab="twitter">Twitter</button> <!-- Button for Twitter tab -->
+            <button class="tab-button" data-tab="instagram">Instagram</button> <!-- Button for Instagram tab -->
+            <button class="tab-button" data-tab="youtube">YouTube</button> <!-- Button for YouTube tab -->
+            <button class="tab-button" data-tab="tiktok">TikTok</button> <!-- Button for TikTok tab -->
+            <button class="tab-button" data-tab="pinterest">Pinterest</button> <!-- Button for Pinterest tab -->
+        </div>
+
+        <div class="tab-content"><!-- Container for all algorithm descriptions -->
+            <div id="facebook" class="tab-pane active"><!-- Section for Facebook's algorithm, set as active -->
+                <h2>Facebook Algorithm</h2>
+                <p>Facebook’s algorithm, officially known as the *Feed Ranking System*, is a sophisticated set of machine learning models and data signals designed to personalise the content each user sees in their News Feed. It operates by evaluating every available post—from friends, groups, pages, and advertisers—and scoring them based on predicted relevance to the individual user. The process begins with inventory gathering, where Facebook collects all possible content a user might see. Then, it applies a series of filters to remove content that violates community standards or has already been seen. Following this, the algorithm ranks the remaining posts using thousands of signals such as user engagement history, type of content, recency, and relationship strength between the user and the content’s source. For instance, if a user frequently likes or comments on a friend’s posts, content from that friend is more likely to appear near the top. Facebook also factors in “meaningful interactions,” prioritising content that is likely to spark back-and-forth conversations or genuine engagement. Additionally, it incorporates feedback mechanisms like user surveys and direct input to improve its predictions over time. In essence, Facebook’s algorithm functions to curate a tailored stream of content aimed at maximising engagement, user satisfaction, and time spent on the platform, while simultaneously ensuring that each News Feed reflects the user’s interests, behaviours, and social connections.</p>
+            </div>
+            <div id="twitter" class="tab-pane"><!-- Section for Twitter's algorithm, set as active -->
+                <h2>Twitter Algorithm</h2>
+                <p>Twitter’s algorithm, particularly for the “For You” timeline, is a highly complex recommendation system driven by machine learning, designed to present users with tweets that are most likely to engage their interest. Rather than simply displaying tweets in reverse chronological order, the algorithm evaluates and ranks a vast pool of content to curate a personalised feed for each user. This system draws from several core sources: tweets from accounts a user follows, tweets liked or retweeted by those accounts, and popular or trending tweets from across the platform. It begins by sourcing candidates—potential tweets that could be shown—using both in-network (accounts the user follows) and out-of-network (accounts the user does not follow) data. The algorithm then evaluates these candidates using a wide array of signals such as user activity (likes, retweets, comments, time spent viewing), tweet characteristics (media content, hashtags, recency), and social context (who interacted with the tweet and the strength of their relationship to the user).
+                    The ranking model, often powered by neural networks, assigns a relevance score to each tweet based on its predicted likelihood of generating positive engagement from the user. Beyond ranking, Twitter applies heuristics to diversify the timeline, limit repetition, and avoid content overload from a single source. The algorithm also uses negative feedback (such as tweets a user skips, reports, or hides) to refine future recommendations. Moreover, Twitter allows manual curation through actions like muting and blocking, which are fed back into the algorithmic process to better tailor future content. Overall, Twitter’s algorithm works by dynamically analysing user behaviour, content patterns, and social interactions to deliver a customised stream of tweets that balances timeliness, relevance, and diversity—enhancing user engagement while preserving the platform’s fast-paced, conversational nature.</p>
+            </div>
+            <div id="instagram" class="tab-pane"><!-- Section for Instagram's algorithm, set as active -->
+                <h2>Instagram Algorithm</h2>
+                <p>Instagram’s algorithm is a sophisticated recommendation system that personalises what each user sees across different sections of the app—such as the Feed, Stories, Explore, and Reels—based on their individual behaviour and preferences. It uses machine learning models to predict which content a user is most likely to engage with, taking into account signals like who they interact with frequently, what type of content they tend to like or comment on, and how recently a post was shared. In the Feed and Stories, the algorithm gives priority to posts from people the user follows, ranking them based on relevance, recency, and the strength of their relationship with the content creator. For Explore and Reels, Instagram broadens the scope by recommending content from accounts the user doesn't follow, but that aligns with their past interactions and interests. Engagement factors such as likes, shares, saves, comments, and even time spent viewing a post contribute to determining what content is shown and in what order. Negative feedback, like hiding or skipping posts, is also used to fine-tune the experience. Overall, Instagram’s algorithm works continuously to learn from user behaviour and serve content that is timely, interesting, and personally relevant.</p>
+            </div>
+            <div id="youtube" class="tab-pane"><!-- Section for youtube's algorithm, set as active -->
+                <h2>YouTube Algorithm</h2>
+                <p>YouTube’s algorithm is a highly advanced recommendation system designed to deliver a personalised viewing experience by predicting what videos each user is most likely to watch and enjoy. It operates across multiple areas of the platform, including the Home page, Up Next suggestions, and the Subscriptions and Trending tabs, using machine learning models that analyse both video performance and user behaviour. The algorithm considers a wide range of signals such as watch history, search queries, likes, dislikes, shares, comments, and how long a user watches each video. On the Home page, it selects a mix of new content and videos from previously watched channels, ranked by relevance and expected engagement. In the Up Next panel, it recommends videos similar to what the user is currently watching, based on patterns of co-viewed content and topic similarity. Audience retention—how long people watch a video before leaving—is a major factor in ranking, along with click-through rate (CTR) and satisfaction surveys. YouTube also factors in negative feedback like "not interested" or video skipping to adjust future recommendations. Overall, the algorithm constantly learns and adapts to individual preferences, aiming to maximise viewer satisfaction, time spent on the platform, and exposure to content that aligns with each user’s unique interests..</p>
+            </div>
+            <div id="tiktok" class="tab-pane"><!-- Section for Tiktok's algorithm, set as active -->
+                <h2>TikTok Algorithm</h2>
+                <p>TikTok’s algorithm is a highly responsive and data-driven recommendation system that powers the “For You” feed by curating videos tailored to each user’s unique preferences and behaviour. It relies heavily on machine learning models that analyse a wide array of signals, including user interactions (such as likes, comments, shares, and watch time), video information (captions, hashtags, and sounds), and device or account settings (like language and location). The algorithm begins by testing a video with a small group of users to gauge its performance, then gradually expands its reach if it receives strong engagement, such as long watch times or repeated views. Each time a user watches or skips a video, the system learns more about their interests and uses that information to refine future recommendations. Unlike some platforms that prioritise content from followed accounts, TikTok places more emphasis on discovery, often showing users content from creators they don’t follow but are likely to enjoy. Negative feedback, such as marking videos as “not interested” or scrolling past quickly, helps the algorithm avoid similar content in the future. Overall, TikTok’s algorithm continuously adapts to real-time signals to deliver a highly engaging, personalised feed that encourages longer viewing sessions and ongoing interaction..</p>
+            </div>
+            <div id="pinterest" class="tab-pane"><!-- Section for Pinterests's algorithm, set as active -->
+                <h2>Pinterest Algorithm</h2>
+                <p>Pinterest’s algorithm is a personalised recommendation system designed to help users discover content—called “Pins”—that matches their tastes, interests, and goals. It works by analysing both the characteristics of the Pins and the individual behaviour of users, using machine learning to surface the most relevant content across the Home feed, search results, and related Pins sections. Key signals include what users have previously searched for, saved, clicked on, or interacted with, as well as the topics, boards, and creators they follow. Each Pin is evaluated based on factors like visual and textual relevance, popularity, freshness, and how closely it aligns with the user’s activity history. The algorithm also uses collaborative filtering, which suggests Pins liked by users with similar interests, and computer vision technology to interpret image content and aesthetics. In search, Pinterest blends keyword matching with personalised ranking, prioritising Pins that are not only relevant to the query but also aligned with the user’s style and past behaviour. Negative signals, like hiding Pins or ignoring certain content types, are used to refine future recommendations. Overall, Pinterest’s algorithm works to deliver a visually appealing and personally meaningful experience, encouraging exploration and inspiration tailored to each user.</p>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () { // Executes once the page is fully loaded
+        const tabButtons = document.querySelectorAll(".tab-button"); // Selects all tab buttons
+        const tabPanes = document.querySelectorAll(".tab-pane"); // Selects all content sections
+
+        tabButtons.forEach(button => {
+            button.addEventListener("click", function () { // Adds click event listener to each tab button
+                
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove("active")); 
+                this.classList.add("active"); // Sets the clicked button as active
+                
+                // Hide all tab panes
+                tabPanes.forEach(pane => pane.classList.remove("active")); 
+                document.getElementById(this.dataset.tab).classList.add("active"); // Displays corresponding content pane
+            });
+        });
+    });
+</script>
+
+<script>
+    const list = document.getElementById("related-articles-list"); // Selects the list container for related articles
+    list.innerHTML = ""; // Clears the existing content in the list
+
+    if (articles[platform]) { // Checks if there are articles available for the given platform
+        articles[platform].forEach(article => { // Loops through the articles for the selected platform
+            const li = document.createElement("li"); // Creates a new list item
+            li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a>`; // Adds a clickable link to the article
+            list.appendChild(li); // Appends the list item to the container
+        });
+    }
+
+    // Call this wherever you update the page content
+    // Example usage: updateRelatedArticles("youtube");
+</script>
+
+
+<div class="button-container"> <!-- Container for navigation buttons -->
+    <a href="page4.html" class="btn">Future of social media privacy</a> <!-- Link to the future of social media privacy page -->
+    <a href="page 2.html" class="btn">Issues relating to privacy</a> <!-- Link to the issues related to privacy page -->
+</div>
+
+
+
+<script>
+function flipCard(card) { // Function to flip a card when clicked
+    card.querySelector(".card-inner").classList.toggle("flipped"); // Toggles the "flipped" class to switch card sides
+}
+</script>
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() { // Runs script after the page loads
+    const slider = document.getElementById("slider"); // Selects the slider element
+    
+    // Check if the current page is the home page
+    if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
+        slider.style.display = "none"; // Hides the slider if the user is on the home page
+    }
+});
+</script>
+
+
+    <script>
+    let slideIndex = 0; // Tracks the current slide index
+    showSlides(slideIndex); // Initializes the slideshow
+
+    function moveSlide(n) { // Function to navigate slides forward or backward
+        showSlides(slideIndex += n); // Adjusts slideIndex and displays the corresponding slide
+    }
+
+    function showSlides(n) { // Function to display the active slide
+        let slides = document.querySelectorAll('.slide'); // Selects all slide elements
+        
+        // Resets slide index if it goes beyond the last slide
+        if (n >= slides.length) slideIndex = 0; 
+        
+        // Sets slide index to last slide if it goes below 0
+        if (n < 0) slideIndex = slides.length - 1; 
+        
+        slides.forEach(slide => slide.style.display = "none"); // Hides all slides
+        slides[slideIndex].style.display = "block"; // Displays the active slide
+    }
+</script>
+</body>
+</html>

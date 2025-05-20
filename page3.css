@@ -1,0 +1,492 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Fullscreen Background */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background 1s ease-in-out;
+    background: linear-gradient(to right, #6a0dad, #9c27b0); /* Default gradient */
+    z-index: -1;
+}
+
+
+/* Dropdown Styling */
+.dropdown-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+#socialSelect {
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#socialSelect:hover {
+    background-color: #f3e5ff;
+}
+
+
+/* Content Box */
+
+
+
+
+
+
+/* Align Paragraphs */
+#description p {
+    text-align: justify; /* Justifies text, making it evenly distributed */
+    width: 90%; /* Adjusts width to keep lengths uniform */
+    margin: 0 auto; /* Centers the paragraph */
+    line-height: 1.8; /* Improves readability */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures body covers the whole screen */
+   
+}
+/* Align Subheadings */
+/* Dynamic Background */
+#background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -1;
+    transition: background 1s ease-in-out;
+    background: linear-gradient(to right, #6a0dad, #9c27b0); /* Default Purple */
+}
+
+
+/* Dropdown Menu */
+.dropdown-container {
+    margin: 20px;
+    padding: 10px;
+}
+
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* Content Box */
+
+
+
+
+/* Styled Headers */h3 {
+    color: #a040c9;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+/* Lists */
+ul {
+    list-style-type: square;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+/* Hide logo until a platform is selected */
+#logoImage {
+    max-width: 120px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column; /* Aligns buttons in a column */
+    gap: 10px;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+
+
+button:hover {
+    background-color:rgba(7,44,81,255);
+}
+.image-container {
+    display: flex; /* Aligns images next to each other */
+    justify-content: center; /* Centers them */
+    gap: 20px; /* Adds spacing between images */
+    margin-top: 20px; /* Pushes images below text */
+}
+
+
+.image-container img {
+    width: 250px; /* Sets fixed width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded edges */
+}
+#related-articles-box {
+    position: absolute;
+    top: 550px; /* Moves it lower */
+    left: 23%; /* Positions it towards the left */
+    width: 300px; /* Slightly larger for better balance */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    z-index: 999; /* Keeps it above other elements */
+    text-align: center; /* Center content */
+    transform: translateX(-50%); /* Adjusts for better centering */
+}
+
+ 
+  #related-articles-box h4 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #333;
+  }
+ 
+  #related-articles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+ 
+ #related-articles-list li {
+    margin: 8px 0;
+    padding-left: 20px; /* Pushes each item further right */
+}
+ 
+ #related-articles-list a {
+    display: block; /* Ensures it takes full width */
+    text-align: center; /* Moves it more towards the right */
+    padding-left: 50px; /* Adds slight space */
+}
+
+ 
+  #related-articles-list a:hover {
+    text-decoration: underline;
+  }
+  .button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.btn {
+    padding: 10px 15px;
+    background-color: #d1d8dc;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.btn:hover {
+    background-color: rgba(7,44,81,255);
+}
+/* General Page Styling *
+
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.logo img {
+    width: 150px; /* Adjust logo size */
+}
+
+
+
+
+/* Dropdown & Menu */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.menu-btn, #platformSelect {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Title Styling */
+.platform-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* Card Styling */
+.card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+    background: transparent;
+}
+
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.card-front {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+
+.card-back {
+    background-color: white;
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+
+/* Icon Styling */
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+
+
+/* Apply Your Gradient Background & Font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tab Container */
+.tab-container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content apart */
+    min-height: 300px; /* Ensures enough space */
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center; /* Centers buttons */
+    gap: 10px; /* Adds spacing between buttons */
+    margin-top: auto; /* Pushes buttons to the bottom */
+}
+
+
+.tab-button {
+    padding: 12px 18px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
+.tab-button.active {
+    background: lightblue;
+    color: black;
+}
+
+.tab-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Tab Content */
+.tab-content {
+    margin-top: 20px;
+}
+
+/* Tab Pane Styling */
+.tab-pane {
+    display: none;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 750px;
+    margin: auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Active Pane */
+.tab-pane.active {
+    display: block;
+}
+
+/* Heading Customization */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 20px;
+    font-size: 30px;
+    color: lightblue;
+}
+
+/* Improve Paragraph Readability */
+p {
+    font-size: 25px; /* Slightly larger for better readability */
+    line-height: 1.6; /* Adds comfortable spacing between lines */
+    max-width: 900px; /* Prevents overly wide text */
+    margin: 15px auto; /* Centers text for a clean look */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15); /* Subtle background for contrast */
+    border-radius: 8px; /* Soft rounded corners */
+    text-align: left; /* Aligns text for a natural reading flow */
+    color: #e0e0e0; /* Light gray for better contrast on a dark background */
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+/* Add Hover Effect for Better Engagement */
+p:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover Effects */
+.tab-pane:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.button-container {
+    position: absolute;
+    top: 100%; /* Keeps buttons at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the container */
+    display: flex; /* Ensures buttons are in a row */
+    flex-direction: row; /* Forces row layout */
+    gap: 15px; /* Adds space between buttons */
+    text-align-last: center;
+}
+
+
+
+.btn {
+    padding: 12px 20px;
+    background-color: lightblue;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: lightcyan;
+}
+.parent-container {
+    position: relative; /* Ensures absolute positioning works */
+    min-height: 300px; /* Gives enough space for bottom alignment */
+}

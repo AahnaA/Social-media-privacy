@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Privacy</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1><img src="lock.jpg" class="lock-icon"> Social Media Privacy</h1>
+
+    <!-- Search Section -->
+    <div class="search-container">
+        <p>Search for topics such as :Background information on social media or Privacy before social media </p>
+        <input type="text" id="searchBar" placeholder="Search..." onkeyup="searchContent()">
+        <ul id="suggestions"></ul>
+    </div>
+
+    <!-- Content Sections (Hidden Initially) -->
+    <div class="content-container">
+        <div class="content-item hidden" data-topic="background">
+            <h2>Background Information on Social Media</h2>
+            <p>Social media emerged in the early 2000s as digital platforms designed to facilitate communication, content sharing, and community-building across the internet. Its roots can be traced to earlier forms of online interaction such as forums, chat rooms, and blogging sites, but it truly gained momentum with the launch of platforms like MySpace, Facebook, and Twitter. These sites revolutionised how people connected by allowing users to create personal profiles, share updates, and engage with others in real-time. Over time, social media expanded rapidly in both reach and functionality, incorporating multimedia sharing, live streaming, and algorithm-driven content curation. Today, platforms like Instagram, TikTok, and Snapchat have reshaped social dynamics, enabling users to instantly share their lives and interact with global audiences. While social media has enhanced communication and self-expression, it has also raised complex issues surrounding data privacy, digital identity, and the spread of misinformation, making it one of the most transformative and controversial developments in modern digital life.
+.</p>
+            <img src="Social media 2 .jpg" alt="Background of Social Media">
+        </div>
+
+        <div class="content-item hidden" data-topic="before">
+            <h2>Privacy Before Social Media</h2>
+            <p>Before the rise of social media and the internet, privacy was easier to maintain due to the difficulty in accessing personal information. Most private details existed in physical forms—like paper records—and were only accessible through direct means such as public directories or word of mouth. Individuals had greater control over what they shared, and unless they disclosed information themselves, their privacy remained largely intact.
+
+Common concerns were limited to basic details like home addresses or phone numbers, with more sensitive data such as bank account details stored offline. Privacy was further protected by slower communication methods, with personal information typically exchanged in private, face-to-face settings or over the phone.
+
+Without digital connectivity, smartphones, or online tracking, monitoring someone's routines or preferences was difficult. Daily life and personal interests were known only to close contacts, making it harder for strangers to intrude.
+
+Overall, privacy in the pre-digital era relied on individual control and physical boundaries. As long as sensitive details were kept private, there were few opportunities for outsiders to access or misuse personal information.
+
+</p>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search-bar");
+    const optionsContainer = document.getElementById("options-container");
+
+    searchInput.addEventListener("input", function () {
+        if (searchInput.value.trim() === "") {
+            optionsContainer.style.display = "none"; // Hide options if input is empty
+        } else {
+            optionsContainer.style.display = "block"; // Show options when user types
+        }
+    });
+});
+</script>
+            <img src="privacy.png" alt="Privacy Before Social Media">
+        </div>
+
+        <div class="content-item hidden" data-topic="today">
+            <h2>How Social Media Affects Privacy Today</h2>
+            <p>Today, social media significantly impacts personal privacy by increasing the amount and accessibility of shared information. Unlike the past, where individuals controlled what they disclosed in limited social circles, modern platforms encourage constant sharing of personal updates, locations, preferences, and daily routines—often without considering the long-term consequences. Social media companies collect vast amounts of user data, including browsing behaviour, interactions, and demographic details, which are stored, analysed, and often shared with third parties for advertising and algorithmic targeting. Privacy settings can be complex and frequently change, making it difficult for users to manage who sees their content. Furthermore, information shared online can be copied, saved, and distributed without consent, increasing the risk of identity theft, cyberstalking, and data breaches. With the rise of facial recognition, geo-tagging, and personalised ads, users are constantly tracked in both digital and physical spaces. As a result, maintaining privacy in the age of social media requires far more awareness, vigilance, and digital literacy than ever before.</p>
+            <img src="Computing pictures.jpg" alt="Social Media Privacy Today">
+        </div>
+    </div>
+
+    <!-- Voice Command Section -->
+    <div class="instructions">
+        <h2>Enable voice commands to venture into the next section of social media!</h2>
+        <p>Say one of the following to navigate:</p>
+        <ul>
+            <li>To head to Page 2, say: <strong>"Social media overview"</strong></li>
+            <li>To head to Page 3, say: <strong>"Algorithms of different platforms"</strong></li>
+        </ul>
+    </div>
+
+    <button onclick="startVoiceCommand()" class="voice-btn">Enable Voice Commands</button>
+    <div id="mic-indicator" class="hidden">🎤 Listening...</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if ('webkitSpeechRecognition' in window) { // Checks if the browser supports speech recognition
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false; // Stops listening after a single input
+            recognition.interimResults = false; // Does not display interim results
+            recognition.lang = "en-US"; // Sets the language to English
+
+            recognition.onresult = function (event) {
+                const speechResult = event.results[0][0].transcript.toLowerCase(); // Gets the spoken text
+                
+                // Checks the spoken phrase and navigates accordingly
+                if (speechResult.includes("social media overview")) {
+                    window.location.href = "page 2.html"; // Redirects to Page 2
+                } else if (speechResult.includes("algorithms of different platforms")) {
+                    window.location.href = "page 3.html"; // Redirects to Page 3
+                } else {
+                    alert("Command not recognized. Please say 'Social media overview' or 'Algorithms of different platforms'."); // Displays an alert for unrecognized commands
+                }
+            };
+
+            document.getElementById("start-voice").addEventListener("click", function () {
+                recognition.start(); // Starts listening for voice input
+            });
+        } else {
+            alert("Voice recognition is not supported in your browser."); // Alerts if speech recognition isn't supported
+        }
+    });
+</script>
+<!-- Button to activate voice recognition -->
+
+
+    <!-- JavaScript for Search & Voice -->
+    <script>
+        function searchContent() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let contentItems = document.querySelectorAll(".content-item");
+            let suggestions = document.getElementById("suggestions");
+
+            suggestions.innerHTML = "";
+            let matchesFound = false;
+
+            contentItems.forEach(item => {
+                item.style.display = "none"; 
+                let topic = item.getAttribute("data-topic");
+
+                if (topic.includes(input) || item.innerText.toLowerCase().includes(input)) {
+                    item.style.display = "block"; 
+                    item.style.animation = "fadeIn 0.5s ease-in-out";
+                    matchesFound = true;
+                }
+
+                // Auto-suggestions
+                if (input && topic.includes(input)) {
+                    let suggestionItem = document.createElement("li");
+                    suggestionItem.innerText = item.querySelector("h2").innerText;
+                    suggestionItem.onclick = () => {
+                        document.getElementById("searchBar").value = suggestionItem.innerText;
+                        searchContent();
+                    };
+                    suggestions.appendChild(suggestionItem);
+                }
+            });
+
+            if (!matchesFound) suggestions.innerHTML = "<li>No matching results found</li>";
+        }
+
+        function startVoiceCommand() {
+            if ('webkitSpeechRecognition' in window) {
+                document.getElementById("mic-indicator").classList.remove("hidden");
+
+                let recognition = new webkitSpeechRecognition();
+                recognition.continuous = false;
+                recognition.lang = "en-US";
+
+                recognition.onresult = function(event) {
+                    let voiceInput = event.results[0][0].transcript.toLowerCase();
+
+                    if (voiceInput.includes("social media overview")) {
+                        window.location.href = "page 2.html";
+                    } else if (voiceInput.includes("algorithms of different platforms")) {
+                        window.location.href = "page 3.html";
+                    } else {
+                        alert("Command not recognized. Try saying 'Social media overview' or 'Algorithms of different platforms'.");
+                    }
+
+                    document.getElementById("mic-indicator").classList.add("hidden");
+                };
+
+                recognition.start();
+            } else {
+                alert("Voice recognition not supported on this browser.");
+            }
+        }
+    </script>
+
+     <div class="image-container">
+        <img src="youtubealgorithm.png" alt="Privacy Protection" class="animated-img">
+        <img src="FacebookAlgorithm.jpg" alt="Social Media Monitoring" class="animated-img">
+        <img src="twitterAlgorithmimage.jpg" alt="Data Encryption" class="animated-img">
+    </div>
+
+    <!-- JavaScript for Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let images = document.querySelectorAll(".animated-img");
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add("show");
+                }, index * 500); // Delays each image for a staggered effect
+            });
+        });
+    </script>
+<button class="navigation-btn" onclick="window.location.href='page 2.html'">Go to Page 2</button>
+
+</body>
+</html>

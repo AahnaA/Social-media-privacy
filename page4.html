@@ -1,0 +1,163 @@
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables responsiveness for different screen sizes -->
+    <title>Future of Social Media Privacy</title> <!-- Sets the page title -->
+    <link rel="stylesheet" href="page4.css"> <!-- Links an external CSS file for styling -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul> <!-- List of navigation links -->
+                <li><a href="#hero">Home</a></li> <!-- Link to Hero section -->
+                <li><a href="#privacy-insights">Privacy Insights</a></li> <!-- Link to Privacy Insights section -->
+                <li><a href="#tips-container">Privacy Tips</a></li> <!-- Link to Privacy Tips section -->
+                <li><a href="#future-predictor">Future Predictions</a></li> <!-- Link to Future Predictions section -->
+            </ul>
+            <p>Start scrolling to see the content!</p> <!-- Introductory text -->
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero"> <!-- Hero section with title and introduction -->
+        <div class="overlay">
+            <h1>How to protect yourself online</h1> <!-- Main heading -->
+            <p>Explore how privacy policies evolve as digital platforms expand and how to protect yourself.</p> <!-- Description -->
+        </div>
+    </section>
+
+    <!-- Privacy Insights Section with Grid Layout -->
+    <section id="privacy-insights"> <!-- Section providing information on privacy evolution -->
+        <h2>The Evolution of Privacy</h2>
+        <p>Social media platforms have seen major shifts in privacy practices.</p>
+        <div class="grid-container"> <!-- Grid layout for displaying privacy timeline -->
+            <div class="grid-item"><img src="timeline.png" alt="Privacy in 2010"><p>2010: Open data sharing.</p></div> <!-- Timeline event -->
+        </div>
+    </section>
+
+    <!-- Privacy Tips Section with Interactive Reveal -->
+    <section id="tips-container"> <!-- Section offering privacy protection tips -->
+        <h2>Smart Privacy Practices</h2>
+
+        <div class="tip active"> <!-- First tip is active by default -->
+            <h3>Tip 1: Restrict your data exposure.</h3>
+            <p>Always adjust privacy settings and avoid sharing live location updates.</p>
+        </div>
+
+        <div class="tip">
+            <h3>Tip 2: Strong authentication matters.</h3>
+            <p>Enable multi-factor authentication (MFA) to keep your accounts secure.</p>
+        </div>
+
+        <div class="tip">
+            <h3>Tip 3: Use secure and unique passwords.</h3>
+            <p>Avoid reusing passwords across services, and use a password manager to store them safely.</p>
+        <div class="tip"> 
+            <h3>Tip 3: Use secure and unique passwords.</h3> 
+            <p>Avoid reusing passwords across services, and use a password manager to store them safely.</p> </div> <div class="tip"> <h3>Tip 4: Be cautious with public Wi-Fi.</h3> <p>Use a VPN when connected to public networks to protect your data from interception.</p> </div> <div class="tip"> <h3>Tip 5: Review app permissions regularly.</h3> <p>Only grant apps the permissions they need and revoke any unnecessary access.</p> </div> 
+        <div class="tip"> 
+            <h3>Tip 6: Think before you click.</h3> 
+            <p>Don’t open links or attachments from unknown or suspicious sources to avoid phishing scams.</p>
+        </div>
+
+        <!-- Additional privacy tips follow the same structure -->
+    </section>
+
+    <!-- Future Predictions Section -->
+    <section id="future-predictor"> <!-- Interactive prediction feature -->
+        <h2>Your Social Media Future</h2>
+        <p>Enter your social media habits, and we'll predict how your platform usage may evolve.</p>
+        <input type="text" id="habit-input" placeholder="Example: I post daily, engage with ads, etc."> <!-- User input field -->
+        <button onclick="generatePrediction()">See Your 2030 Social Media</button> <!-- Button to generate prediction -->
+        <div id="prediction-result"></div> <!-- Displays generated prediction -->
+    </section>
+
+    <!-- Footer -->
+
+    <script>
+        let currentTipIndex = 0; // Tracks the current active tip
+        const tips = document.querySelectorAll(".tip"); // Selects all tip elements
+
+        function showNextTip() { // Function to cycle through tips
+            tips[currentTipIndex].classList.remove("active"); // Removes active class from current tip
+            currentTipIndex = (currentTipIndex + 1) % tips.length; // Moves to the next tip
+            tips[currentTipIndex].classList.add("active"); // Activates new tip
+        }
+
+        function generatePrediction() { // Function to generate a social media prediction
+            const habits = document.getElementById("habit-input").value; // Gets user input
+            const predictionBox = document.getElementById("prediction-result"); // Selects result container
+
+            if (!habits) { // Checks if input is empty
+                predictionBox.innerHTML = "<p>Please enter your habits to receive a prediction!</p>";
+                return;
+            }
+
+            const predictions = [ // Array of possible predictions
+                "🌐 AI-driven personalization will fully automate your feed.",
+                "🔒 Privacy-first social networks will let you own your data.",
+                "📢 Influencers will rely on blockchain-based verification.",
+                "🧠 Social media will predict your interests before you even post."
+            ];
+
+            predictionBox.innerHTML = `<p>${predictions[Math.floor(Math.random() * predictions.length)]}</p>`; // Displays a random prediction
+        }
+
+        // Scroll animation reveal
+        window.addEventListener("scroll", function () { // Reveals sections as user scrolls
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+
+    <script>
+    window.addEventListener("scroll", function () { // Triggers animation for scrolling image
+        const image = document.querySelector(".scroll-image");
+
+        if (image.getBoundingClientRect().top < window.innerHeight - 100) {
+            image.classList.add("visible"); // Adds visibility class when image enters viewport
+        }
+    });
+    </script>
+
+    <button class="bottom-button" onclick="window.location.href='index.html'">Go to Home</button> <!-- Navigation button -->
+    <div class="scroll-image">
+        <img src="private.jpg" alt="Dynamic Image"> <!-- Image that appears while scrolling -->
+    </div>
+    <div class="scroll-image-left">
+        <img src="lock.jpg" alt="Left Appearing Image"> <!-- Another scrolling image -->
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () { // Ensures script runs after page loads
+        window.addEventListener("scroll", function () { // Detects scrolling event
+            const image = document.querySelector(".scroll-image");
+
+            if (image.getBoundingClientRect().top < window.innerHeight - 100) {
+                image.classList.add("visible"); // Displays image when in viewport
+            }
+        });
+    });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () { // Ensures script runs after page loads
+        window.addEventListener("scroll", function () { // Detects scrolling event
+            const leftImage = document.querySelector(".scroll-image-left");
+
+            if (leftImage.getBoundingClientRect().top < window.innerHeight - 100) {
+                leftImage.classList.add("visible"); // Displays left-side image when in viewport
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+/* Parallax Section */
+.parallax {
+  height: 100vh; /* Full screen height */
+  background-image: url('lock.jpg'); /* Replace with your image */
+  background-attachment: fixed; /* Creates the parallax effect */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Content Section */
+.content {
+  display: inline-block; /* Shrinks the box to fit its content */
+  background-color: #f4f4f4; /* Light grey background */
+  padding: 50px; /* Space inside the box */
+  margin-left: auto; /* Pushes the box to the right */
+  margin-right: 100px; /* Adds space from the right edge */
+  text-align: justify; /* Justify text within the box */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+  border-radius: 10px; /* Optional: Slightly rounded edges for aesthetics */
+  padding-right:400,000px;
+
+.content-image{
+display: block;
+width: 100%; /* Adjust width as needed */
+max-width: 600px; /* Ensures the image doesn't become too large */
+float: right; /* Moves the image to the right */
+margin-left: 20px; /* Adds spacing between text and image */
+border-radius: 10px; /* Optional rounded corners */
+}
+
+}
+
+
+h1{
+  margin: 0px;
+  text-align:left;
+  color: lightblue;
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+h2{
+  margin: 0px;
+  text-align:left;
+  color: lightblue;
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+h3{
+  margin: 0px;
+  text-align:left;
+  color:lightblue;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+p{
+  margin-right: 1000px;
+  text-align:right;
+  color:black;
+  font-size: 20px;
+  width: 750px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5;
+  padding-left: 20;
+  font-family: 'Poppins', sans-serif;
+}
+
+.paragraph-privacy {
+  width: 60%; /* Keeps text block structured */
+  margin-left: auto; /* Pushes the block to the right */
+  margin-right: 0; /* Ensures it sticks to the right */
+  background-color: skyblue;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 17px;
+  line-height: 2.0;
+  color: #2c2c2c;
+  margin-bottom: 25px;
+  text-align: right; /* Aligns text inside the box */
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* For just the heart and like icons */
+.icon-scroll img[alt="Heart"],
+.icon-scroll img[alt="Like"] {
+transition: opacity 0.4s ease;
+}
+
+.icon-scroll img[alt="Heart"]:hover,
+.icon-scroll img[alt="Like"]:hover {
+opacity: 0.3;
+cursor: pointer;
+}
+
+/* 🌌 Splash Screen */
+.splash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: linear-gradient(45deg, #111, #222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1.5s ease-in-out 6s forwards;
+  z-index: 9999;
+}
+
+/* 📱 Phone UI */
+.phone {
+  width: 300px;
+  height: 500px;
+  background: linear-gradient(145deg, #1a1a1a, #333);
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeOut 1.5s ease-in-out 6s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 📺 Screen */
+.screen {
+  width: 90%;
+  height: 90%;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+/* ✨ Glossy Overlay */
+.glass-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+/* 💬 Message Animations */
+.message {
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  text-align: center;
+  margin: 2px 0;
+  opacity: 0;
+  animation: cycleMessages 6s linear forwards;
+  position: relative;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Unique Colors with Glow Effect */
+.msg1 { background: #007BFF; color: #fff; animation-delay: 0s; } /* Blue */
+.msg2 { background: #ff4d4d; color: #fff; animation-delay: 0.8s; } /* Red */
+.msg3 { background: #ffcc00; color: #333; animation-delay: 1.6s; } /* Yellow */
+.msg4 { background: #48c774; color: #fff; animation-delay: 2.4s; } /* Green */
+.msg5 { background: #a463f2; color: #fff; animation-delay: 3.2s; } /* Purple */
+
+/* ✨ Typing Animation */
+.message::after {
+  content: " |";
+  animation: typingBlink 0.5s infinite;
+}
+
+@keyframes typingBlink {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ✨ Animation: Messages Fade In & Out */
+@keyframes cycleMessages {
+  0% { opacity: 0; transform: scale(0.8); }
+  15% { opacity: 1; transform: scale(1); }
+  60% { opacity: 1; }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* 📜 Full Screen Fade Out */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* 📱 Vibration Effect (Triggers When Message Appears) */
+/* 📱 Stronger Vibration Effect */
+@keyframes vibrate {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-3px, 3px); }
+  20% { transform: translate(3px, -3px); }
+  30% { transform: translate(-3px, 3px); }
+  40% { transform: translate(3px, -3px); }
+  50% { transform: translate(-3px, 3px); }
+  60% { transform: translate(3px, -3px); }
+  70% { transform: translate(-3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  90% { transform: translate(-3px, 3px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Apply Stronger Vibration to Phone */
+.phone {
+  animation: vibrate 0.3s ease-in-out;
+}
+
+/* Apply Vibration Animation to the Phone */
+.message:nth-child(odd) {
+  animation: vibrate 0.2s ease-in-out 1;
+}
+
+/* 🔄 Floating Social Media Elements (Inside Phone Screen) */
+.floating-icons div {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0;
+  animation: floatAnimation 5s infinite ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Positioning Inside the Phone Screen */
+.heart { top: 60%; left: 40%; animation-delay: 1s; }
+.thumbs-up { top: 75%; left: 70%; animation-delay: 2s; }
+.reel { top: 50%; left: 30%; animation-delay: 3s; }
+.share { top: 40%; left: 10%; animation-delay: 4s; }
+
+/* ✨ Floating Animation */
+@keyframes floatAnimation {
+  0% { opacity: 0; transform: translateY(0px) scale(0.8); }
+  50% { opacity: 1; transform: translateY(-15px) scale(1); }
+  100% { opacity: 0; transform: translateY(-30px) scale(0.8); }
+}
+
+/* 📄 Reveal Main Webpage */
+.main-content {
+  opacity: 0;
+  animation: revealPage 2s ease-in-out 6.5s forwards;
+}
+
+@keyframes revealPage {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.video-container {
+  width: 45%; /* Adjusts each video width */
+  max-width: 600px; /* Limits max size */
+}
+
+.video-container video {
+  width: 100%; /* Makes videos responsive */
+  border-radius: 10px;
+}
+
+.nav-button {
+  display: block;
+  width: fit-content;
+  margin-left: 7000px; /* Moves button further left */
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
+.video-section {
+  position: relative; /* Allows absolute positioning inside */
+  padding-bottom: 50px; /* Adds space for buttons */
+  display: flex;
+  justify-content: right; /* Centers both videos */
+  align-items: right;
+  gap: 20px; /* Adds spacing between the two videos */
+  padding: 50px 0;
+  background-color: #f3f3f3;
+  }
+  
+
+
+/* Keep Button Container Inside the Section */
+.button-container {
+  position: absolute;
+  bottom: 10px; /* Pushes buttons to the bottom */
+  left: 10px; /* Aligns buttons to the left */
+  display: flex;
+  flex-direction: column; /* Stacks buttons vertically */
+  gap: 10px; /* Adds space between buttons */
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+
+
